@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}{{post.title}}{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+
+<style>
+    .row-title {
+        font-family: Oswald, sans-serif;
+        font-weight: 700;
+        font-size: 35px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .news-img-container {
+        overflow: hidden;
+        flex-wrap: nowrap;
+    }
+
+    .img-row {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        height: 560px;
+    }
+
+    .img-row img {
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .desc-title {
+        font-family: Oswald, sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .items-title {
+        padding: 8px 0;
+        font-family: Oswald, sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #BA9071;
+    }
+
+    .last-news-item {
+        padding-top: 10px;
+        border-bottom: 1px solid #d4d3d3;
+    }
+
+    .last-news-item a {
+        display: inline-block;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.7);
+        font-family: Jost, sans-serif;
+        font-size: 15px;
+        margin-bottom: 12px;
+
+    }
+
+    .last-news-item a:hover {
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .arrow-span {
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+    }
+
+    .arrow-span:hover {
+        background: rgba(0, 0, 0, 0.6);
+        transition: 0.7s;
+    }
+
+    .arrow-span svg {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .arrow-span svg path {
+        fill: #fff;
+    }
+
+    .pager-arrows-wrapper {
+        display: flex;
+    }
+
+    .news-arrow-span {
+        cursor: pointer;
+    }
+
+    .news-arrow-span svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    @media screen and (max-width: 1152px) {
+        .img-row {
+            height: 500px;
+        }
+
+    }
+
+    @media screen and (max-width: 992px) {
+        .img-row {
+            height: 400px;
+        }
+
+    }
+
+    @media screen and (max-width: 767px) {
+        .img-row {
+            height: 300px;
+        }
+
+        .row-title {
+            font-size: 30px;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .img-row {
+            height: 220px;
+        }
+
+        .col-1 {
+            padding: 0px !important;
+        }
+
+        .row-title {
+            font-size: 25px;
+        }
+    }
+</style>
+{% endblock custom_css%}
+
+
+{% block content %}
+<div class="section-innerpage pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="row-title pb-4" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-title">{{post.title}}</span>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-11">
+                        <div class="news-img-container">
+                            <div class="img-row">
+                                <img src="/{{post.thumb}}" alt="Фотография для новости">
+                            </div>
+                            {% if images %}
+                            {% for img in images %}
+                            <div class="img-row">
+                                <img src="/{{img.url}}" alt="Фотография для новости">
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 d-flex flex-column justify-content-center">
+                        <div class="news-slider-arrows">
+                            <div class="slider-prev-arrow news-prev-arrow text-center mb-2">
+                                <span class="news-arrow-span news-arrow-prev" title="Предыдущий слайд">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="slider-next-arrow news-next-arrow text-center">
+                                <span class="news-arrow-span news-arrow-next" title="Следующий слайд">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 pt-4">
+                        <!-- <div class="desc-title">
+                        <span>{{post.title}}</span>
+                    </div> -->
+                        <div class="description" data-aos="fade-up" data-aos-delay="100">
+                            <span>{{post.description|safe}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-nav">
+                    <hr>
+                    <div class="pager d-flex justify-content-between">
+
+
+                        <div class="pager-arrows-wrapper" data-aos="fade-up" data-aos-delay="100">
+                            {% if prev and not check_prev %}
+                            <div class="slider-prev-arrow me-2">
+                                <a href="{% url 'news_detail' prev.slug %}">
+                                    <span class="arrow-span" title="Перейти на Предыдущую запись">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            {% endif %}
+                            {% if next and not check_next %}
+                            <div class="slider-next-arrow">
+                                <a href="{% url 'news_detail' next.slug %}">
+                                    <span class="arrow-span" title="Перейти на следующую запись">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="pager-arrows-wrapper" data-aos="fade-up" data-aos-delay="100">
+                            <div class="all-projects-icon">
+                                <a href="{% url 'news' %}">
+                                    <span class="arrow-span all-projects-svg" title="Все новости">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z" />
+                                            <path fill-rule="evenodd"
+                                                d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="actionbar" >
+                    <div class="search-bar" data-aos="fade-up" data-aos-delay="100">
+                        <label for="search" class="items-title">Поиск</label>
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Найти...">
+                    </div>
+                    <div class="last-news" data-aos="fade-up" data-aos-delay="100">
+                        <div class="items-title">
+                            <span>СВЕЖИЕ ЗАПИСИ</span>
+                        </div>
+                        {% for last in last_five %}
+                        <div class="last-news-item">
+                            <a href="{% url 'news_detail' last.slug %}">{{last.title}}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="archive-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="items-title">
+                            <span>АРХИВЫ</span>
+                        </div>
+                        <div class="last-news-item">
+                            {% now 'Y' as year %}
+                            <a href="{% url 'article_year_archive' year %}">Архив 2023</a>
+                        </div>
+                    </div>
+                    <div class="rubrika" data-aos="fade-up" data-aos-delay="100">
+                        <div class="items-title">
+                            <span>РУБРИКИ</span>
+                        </div>
+                        {% for rubric in rubrics %}
+                        <div class="last-news-item">
+                            <a href="{% url 'filter' id=rubric.id %}">{{rubric.name}}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

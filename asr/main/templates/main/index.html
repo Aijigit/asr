@@ -1,0 +1,523 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Architectural Studio Ruslan{% endblock title %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'main/css/slick-lightbox.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+{% endblock custom_css %}
+{% block content %}
+<section class="hero-section">
+    <div class="hero-wrap">
+        <div class="container">
+            <div class="poster">
+                <div class="square-wrap">
+                    <div class="square" data-aos="fade-right" data-aos-delay="200">
+                    </div>
+                    <div class="square" data-aos="fade-left" data-aos-delay="200">
+                    </div>
+                </div>
+                <div class="poster-wrap">
+                    <div class="poster-text" data-aos="fade-up" data-aos-delay="100">
+                        <span class="wrap-div">Архитектура</span>
+                    </div>
+                    <div class="heading" data-aos="fade-up" data-aos-delay="100">
+                        <span class="wrap-div">ДИЗАЙН</span>
+                    </div>
+                    <div class="txt">
+                        <span class="wrap-div" data-aos="fade-up" data-aos-delay="100"">Строительство</span>
+                    </div>
+                    <div class="about-txt" data-aos="fade-up" data-aos-delay="100">
+                        <span class="wrap-div">Грамотное проектирование – залог успешного строительства!</span>
+                    </div>
+                    <div class="callback-wrap">
+                        <div class="callback-online" data-aos="fade-up" data-aos-delay="100">
+                            <div class="callback-link">
+                                <a href="https://wa.me/message/EC5ZXK5GNJ45F1" class="wrap-div call">ОСТАВИТЬ ЗАЯВКУ
+                                    ONLINE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="square-wrap">
+                    <div class="square" data-aos="fade-right" data-aos-delay="300">
+                    </div>
+                    <div class="square" data-aos="fade-left" data-aos-delay="300">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="services">
+    <div class="container services-container">
+        <div class="services-header">
+            <div class="heading-wrap">
+                <div class="service-heading">
+                    <span class="wrap-div" data-aos="fade-up" data-aos-delay="100">наши услуги</span>
+                </div>
+            </div>
+            <div class="desc-wrap">
+                <div class="desc" data-aos="fade-up" data-aos-delay="100">
+                    <span class="wrap-div desc-text">Мы, команда «ASR», предоставляем услуги проектирование различных
+                        объектов и зданий в сфере строительства.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-content">
+            <div class="services-block">
+                <div class="items-wrap">
+                    <div class="items">
+                        <div class="item-outer">
+                            <div class="item-inner">
+                                <div class="item">
+                                    <div class="img-wrap" data-aos="fade-down" data-aos-delay="500">
+                                        <div class="img-fit">
+                                            <img src="{% static 'main/img/2.jpg' %}" alt="" class="zoom">
+                                        </div>
+                                    </div>
+                                    <div class="number-wrap" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="number">
+                                            <div class="number-text">
+                                                <span class="wrap-div">01</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="title-wrap" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="item-title">
+                                            <span class="wrap-div item-text">Архитектурное проектирование</span>
+                                        </div>
+                                        <div class="item-desc">
+                                            <span class="wrap-div">Проектирование домов, квартир, комплексов и
+                                                коммерческих объектов архитекторами с 10-летним опытом</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-outer">
+                            <div class="item-inner">
+                                <div class="item">
+                                    <div class="img-wrap" data-aos="fade-down" data-aos-delay="500">
+                                        <div class="img-fit">
+                                            <img src="{% static 'main/img/interier.jpg' %}" alt="" class="zoom">
+                                        </div>
+                                    </div>
+                                    <div class="number-wrap" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="number">
+                                            <div class="number-text">
+                                                <span class="wrap-div">02</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-wrap" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="item-title">
+                                            <span class="wrap-div item-text">Дизайн интерьера</span>
+                                        </div>
+                                        <div class="item-desc">
+                                            <span class="wrap-div">Грамотно продуманный дизайн интерьера способен
+                                                изменить качество вашей жизни в лучшую сторону.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-outer">
+                            <div class="item-inner">
+                                <div class="item">
+                                    <div class="img-wrap" data-aos="fade-down" data-aos-delay="500">
+                                        <div class="img-fit">
+                                            <img src="{% static 'main/img/construction.jpg' %}" alt="" class="zoom">
+                                        </div>
+                                    </div>
+                                    <div class="number-wrap" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="number">
+                                            <div class="number-text">
+                                                <span class="wrap-div">03</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-wrap" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="item-title">
+                                            <span class="wrap-div item-text">Строительство жилых домов</span>
+                                        </div>
+                                        <div class="item-desc">
+                                            <span class="wrap-div">Мы поможем вам не только с разработкой проекта, но и
+                                                с его реализацией.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section ABOUT -->
+<section class="about">
+    <div class="container about-container">
+        <div class="about-wrap">
+            <div class="square-wrap">
+                <div class="square" data-aos="fade-right" data-aos-delay="300"></div>
+                <div class="square" data-aos="fade-left" data-aos-delay="300"></div>
+            </div>
+            <div class="about-content" data-aos="zoom-in" data-aos-delay="300">
+                <h1 class="about-heading">О КОМПАНИИ</h1>
+                <div class="about-text">
+                    <span class="wrap-div">Наша студия специализируется на проектировании жилых и коммерческих зданий,
+                        дизайне интерьеров торговых, общественных и офисных пространств.
+                        <br><br>
+                        В своей работе, мы помогаем клиентам найти оптимальное архитектурное решение для развития
+                        бизнеса. Наша основная задача – создавать проекты высокого уровня в Кыргызстане, максимально
+                        удовлетворяя индивидуальные требования каждого заказчика. Уже 15 лет мы занимаем уверенную
+                        позицию на рынке строительства и архитектуры. На нашем счету более 100 реализованных проектов в
+                        Кыргызстане и зарубежом.
+                    </span>
+                </div>
+                <div class="about-callback">
+                    <div class="callback-button">
+                        <div class="callback-txt">
+                            <div class="wrap-div">ОСТАВИТЬ ЗАЯВКУ ONLINE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="square-wrap">
+                <div class="square" data-aos="fade-right" data-aos-delay="300"></div>
+                <div class="square" data-aos="fade-left" data-aos-delay="300"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="services">
+    <div class="container services-container">
+        <div class="services-header">
+            <div class="heading-wrap">
+                <div class="service-heading" data-aos="fade-right" data-aos-delay="300">
+                    <span class="wrap-div">Портфолио</span>
+                </div>
+            </div>
+            <div class="desc-wrap" data-aos="fade-left" data-aos-delay="300">
+                <div class="desc">
+                    <span class="wrap-div desc-text">Объектами проектирования являются частные дома и квартиры, кафе и
+                        рестораны, градостроительная деятельность, торговые центры и даже заводы.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects-wrap">
+        {% if pr_count < 5 %} <div class="error pt-5 text-center">
+            <h2 class="text-danger text-center">Добавьте минимум 6 проекта. </h2>
+            <span>На данный момент в БД {{pr_count}} записей.</span>
+    </div>
+    {% else %}
+    <div class="projects-list">
+        <div class="projects-list-wrapper d-flex">
+            {% for project in projects %}
+            <div class="project-item-outer">
+                <div class="project-item">
+                    <div class="project-item-inner">
+                        <a href="{% url 'portfolio_detail' project.slug %}" class="project-link">
+                            <div class="project-img-wrap">
+                                <div class="project-img-fit">
+                                    <img src="/{{project.img_thumb}}" class="project-img">
+                                </div>
+                            </div>
+                            <div class="project-desc-wrap">
+                                <div class="project-title">
+                                    <span class="wrap-div">{{project.title}}</span>
+                                </div>
+                                <div class="project-text">
+                                    <div class="wrap-div">{{project.short_description}}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="arrows-wrapper">
+        <div class="arrows">
+            <div class="arrow-prev project-prev" data-aos="fade-right" data-aos-delay="300">
+                <span class="arrow-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"
+                        data-prefix="idqz0yaub">
+                        <path
+                            d="M153.4 256L381 18c4.1-4.3 3.9-11-.3-15.1s-11-3.9-15.1.3L131 248.6c-3.9 4.1-3.9 10.6 0 14.8l234.7 245.3c2.1 2.2 4.9 3.3 7.7 3.3 2.6 0 5.3-1 7.4-3 4.3-4.1 4.4-10.8.3-15.1L153.4 256z"
+                            class="path-iaisr0bkt"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="arrow-next project-next" data-aos="fade-left" data-aos-delay="300">
+                <span class="arrow-svg">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.99 511.99"
+                        width="255.99" height="511.99" data-prefix="itynoltdc">
+                        <path
+                            d="M253 248.62L18.37 3.29A10.67 10.67 0 1 0 3 18l227.6 238L3 494a10.67 10.67 0 0 0 15.42 14.75L253 263.37a10.68 10.68 0 0 0 0-14.75z"
+                            class="path-iuoti8u0v"></path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    </div>
+
+
+</section>
+
+
+<!-- WHY WE& -->
+<section class="statics">
+    <div class="container static-container">
+        <div class="static-heading">
+            <div class="static-title">
+                <div class="static-heading-text">
+                    <span class="wrap-div">ПОЧЕМУ МЫ?</span>
+                </div>
+            </div>
+
+            <div class="static-desc-wrap">
+                <div class="static-text">
+                    <span class="wrap-div desc-text">Объектами проектирования являются частные дома и квартиры, кафе и
+                        рестораны, градостроительная деятельность, торговые центры и даже заводы.</span>
+                </div>
+            </div>
+        </div>
+        <div class="statics-wrap">
+            <div class="statics-list">
+                <div class="static-items-wrapper">
+                    <div class="static-items">
+                        <div class="static-item-outer">
+                            <div class="static-item">
+                                <div class="static-item-title">
+                                    +
+                                    <span data-purecounter-start="0" data-purecounter-end="100"
+                                        data-purecounter-duration="1" class="wrap-div purecounter"></span>
+                                </div>
+                                <div class="static-item-text">
+                                    <span class="wrap-div">ПРОЕКТОВ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="static-item-outer">
+                            <div class="static-item">
+                                <div class="static-item-title">
+                                    <span data-purecounter-start="0" data-purecounter-end="50"
+                                        data-purecounter-duration="1" class="wrap-div purecounter"></span>
+                                </div>
+                                <div class="static-item-text">
+                                    <span class="wrap-div">Партнеров</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="static-item-outer">
+                            <div class="static-item">
+                                <div class="static-item-title">
+                                    <span data-purecounter-start="0" data-purecounter-end="20"
+                                        data-purecounter-duration="1" class="wrap-div purecounter"></span>
+                                </div>
+                                <div class="static-item-text">
+                                    <span class="wrap-div">СОТРУДНИКОВ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="static-item-outer">
+                            <div class="static-item">
+                                <div class="static-item-title">
+                                    <span data-purecounter-start="0" data-purecounter-end="15"
+                                        data-purecounter-duration="1" class="wrap-div purecounter"></span>
+                                </div>
+                                <div class="static-item-text">
+                                    <span class="wrap-div">ОПЫТА РАБОТЫ</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container quality-container">
+        <div class="quality-wrap">
+            <div class="quality-img-fit">
+                <img src="{% static 'main/img/statics/8.webp' %}" alt="Quality Bg Image" class="img-quality">
+            </div>
+            <div class="img-fit-overlay">
+                <div class="img-fit-wrap">
+                    <div class="square-wrap">
+                        <div class="square" data-aos="fade-right" data-aos-delay="300"></div>
+                        <div class="square" data-aos="fade-left" data-aos-delay="300"></div>
+                    </div>
+                    <div class="img-fit-content">
+                        <div class="quality-text">
+                            <div class="quality-items">
+                                <div class="quality-items-wrap">
+                                    <div class="quality-item-outer">
+                                        <div class="quality-item">
+                                            <div class="quality-num-wrap">
+                                                <span class="wrap-div">01</span>
+                                            </div>
+                                            <div class="quality-icon" data-aos="flip-right" data-aos-delay="300">
+                                                <img src="{% static 'main/img/statics/graphic-design_4.webp' %}"
+                                                    alt="Quality Icon">
+                                            </div>
+                                            <div class="quality-title">
+                                                <span class="wrap-div">КАЧЕСТВЕННЫЙ СТРОИТЕЛЬНЫЙ ПРОЕКТ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quality-item-outer">
+                                        <div class="quality-item">
+                                            <div class="quality-num-wrap">
+                                                <span class="wrap-div">02</span>
+                                            </div>
+                                            <div class="quality-icon" data-aos="flip-left" data-aos-delay="300">
+                                                <img src="{% static 'main/img/statics/cooperation_1.webp' %}"
+                                                    alt="Quality Icon">
+                                            </div>
+                                            <div class="quality-title">
+                                                <span class="wrap-div">КАЧЕСТВЕННЫЙ СТРОИТЕЛЬНЫЙ ПРОЕКТ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square-wrap">
+                        <div class="square" data-aos="fade-right" data-aos-delay="300"></div>
+                        <div class="square" data-aos="fade-left" data-aos-delay="300"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews  -->
+<section class="reviews">
+    <div class="container reviews-container">
+        <div class="reviews-header" data-aos="fade-up" data-aos-delay="100">
+            <div class="reviews-heading">
+                <div class="reviews-heading-txt">
+                    <span class="wrap-div">Наши награды</span>
+                </div>
+            </div>
+            <div class="reviews-about">
+                <div class="reviews-about-text">
+                    <span class="wrap-div desc-text">Объектами проектирования являются частные дома и квартиры, кафе и
+                        рестораны,
+                        градостроительная деятельность, торговые центры и даже заводы.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rate-container">
+            <div class="rate-list">
+                {% if aw_count < 2 %} <div class="error pt-5 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-danger">Добавьте минимум 3 награды.</h2>
+                    <span>На данный момент в БД {{aw_count}} записей.</span>
+            </div>
+            {% else %}
+            <div class="rate-list-items">
+                <div class="rate-wrapper rate-wrap">
+                    {% for award in awards %}
+                    <div class="rate-item-outer" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rate-item">
+                            <div class="rate-img-wrap">
+                                <div class="rate-img-fit">
+                                    <img src="/{{award.picture}}" alt="" class="img-avatar">
+                                </div>
+                            </div>
+                            <div class="rate-content-wrap">
+                                <div class="rate-text">
+                                    <span class="wrap-div">{{award.description}}</span>
+                                </div>
+                                <div class="rate-title">
+                                    <span class="wrap-div">{{award.title}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="partners-container">
+        <div class="partners-list">
+            {% if pn_count < 5 %} <div class="error pt-5 text-center" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-danger">Добавьте минимум 5 партнера.</h2>
+                <span>На данный момент в БД {{pn_count}} записей.</span>
+        </div>
+        {% else %}
+        <div class="partners-header d-flex justify-content-between">
+            <div class="partner-title" data-aos="fade-up" data-aos-delay="100">
+                <span class="partner-txt">Наши Партнеры</span>
+            </div>
+            <div class="partners-arrow" data-aos="fade-up" data-aos-delay="100">
+                <div class="arrows">
+                    <div class="arrow-prev partner-prev">
+                        <span class="arrow-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"
+                                data-prefix="idqz0yaub">
+                                <path
+                                    d="M153.4 256L381 18c4.1-4.3 3.9-11-.3-15.1s-11-3.9-15.1.3L131 248.6c-3.9 4.1-3.9 10.6 0 14.8l234.7 245.3c2.1 2.2 4.9 3.3 7.7 3.3 2.6 0 5.3-1 7.4-3 4.3-4.1 4.4-10.8.3-15.1L153.4 256z"
+                                    class="path-iaisr0bkt"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="arrow-next partner-next">
+                        <span class="arrow-svg">
+                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.99 511.99"
+                                width="255.99" height="511.99" data-prefix="itynoltdc">
+                                <path
+                                    d="M253 248.62L18.37 3.29A10.67 10.67 0 1 0 3 18l227.6 238L3 494a10.67 10.67 0 0 0 15.42 14.75L253 263.37a10.68 10.68 0 0 0 0-14.75z"
+                                    class="path-iuoti8u0v"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partners-wrapper">
+            <div class="partners">
+                {% for partner in partners %}
+                <div class="partner-outer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="partner-item">
+                        <a href="#" class="partner-link" title="{{partner.name}}">
+                            <div class="partner-img">
+                                <img src="/{{partner.img}}" alt="" class="partner-logo">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    </div>
+    </div>
+</section>
+
+{% endblock content %}

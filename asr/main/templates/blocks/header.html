@@ -1,0 +1,214 @@
+{% load static %}
+<header>
+    <!-- <div class="section-top">
+        <div class="container w-1400 d-flex justify-content-between align-items-center">
+            <div class="top-title animate__animated animate__fadeInDown">
+                <span class="span">Добро пожаловать на наш сайт!</span>
+            </div>
+            <div class="top-social">
+                <div class="sub-title animate__animated animate__fadeInDown">
+                    <span class="span">Подписывайтесь на нас в соцсетях</span>
+                </div>
+                <div class="social-container d-flex animate__animated animate__fadeInDown">
+                    <div class="social-item">
+                        <a href="https://www.facebook.com/architectural_studio_ruslan-105769320934375"
+                            class="link-universal" title="Наша страница в FaceBook" target="_blank">
+                            <span image="Array" class="svg_image svg_image--u-i8rnahmt6" id="i8rnahmt6_0">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.0" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50"
+                                    class="icon icons8-Facebook-Filled">
+                                    <path
+                                        d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="/" class="link-universal">
+                            <span image="Array" class="svg_image svg_image--u-i8rnahmt6" id="i8rnahmt6_1"
+                                data-do-svg_image="{&quot;screen&quot;:{&quot;stretch&quot;:true}}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12"
+                                    data-prefix="igysghh5d">
+                                    <path
+                                        d="M16.821 9.414a3.7 3.7 0 0 1-.674 1.695 2.415 2.415 0 0 1-1.7.723c-2.38.173-5.949.178-5.949.178s-4.416-.04-5.776-.171a2.869 2.869 0 0 1-1.873-.73 3.708 3.708 0 0 1-.675-1.695 25.977 25.977 0 0 1-.17-2.765v-1.3a25.921 25.921 0 0 1 .17-2.764 3.71 3.71 0 0 1 .675-1.7 2.416 2.416 0 0 1 1.7-.723c2.377-.174 5.944-.174 5.944-.174H8.5s3.564 0 5.944.174a2.415 2.415 0 0 1 1.7.723 3.7 3.7 0 0 1 .674 1.7 25.772 25.772 0 0 1 .171 2.764v1.3a25.827 25.827 0 0 1-.168 2.765zm-10.078-6v4.8l4.589-2.392z"
+                                        fill-rule="evenodd" class="path-ixpzs1pjz"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="/" class="link-universal">
+                            <span image="Array" class="svg_image svg_image--u-i8rnahmt6" id="i8rnahmt6_2"
+                                data-do-svg_image="{&quot;screen&quot;:{&quot;stretch&quot;:true}}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.969" height="15"
+                                    viewBox="0 0 16.969 15" data-prefix="idhl558qn">
+                                    <path data-name="4Telegram.svg"
+                                        d="M15.845.128L.624 6.147c-.832.251-.806 1.11-.19 1.316l3.814 1.244 1.459 4.672c.177.511.322.7.625.708a1 1 0 0 0 .771-.422c.387-.379.977-.977 1.909-1.923l3.966 3.061c.73.42 1.257.2 1.439-.708l2.487-12.849C17.171.13 16.543-.2 15.845.128zm-11 8.293l8.67-5.682c.428-.3.562.035.369.266l-7.2 6.76-.369 3.374z"
+                                        fill-rule="evenodd" class="path-ipeicbp7v"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://wa.me/message/EC5ZXK5GNJ45F1" target="_blank"" class=" link-universal">
+                            <span image="Array" class="svg_image svg_image--u-i8rnahmt6" id="i8rnahmt6_2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="section-info">
+        <div class="container w-1400 info-container">
+            <a href="{% url 'index' %}" class="logo-link d-flex">
+                <div class="logo" data-aos="fade-up" data-aos-delay="100">
+                    <img src="{% static 'main/img/statics/logo.png' %}" alt="logo">
+                </div>
+                <div class="text-wrap d-flex flex-column" >
+                    <div class="text-h" data-aos="fade-up" data-aos-delay="100">
+                        <span class="text-title">ARCHITECHTURAL STUDIO RUSLAN</span>
+                    </div>
+                    <div class="text text-sp" data-aos="fade-up" data-aos-delay="100">
+                        <span class="span text-span">ARCHITECHTURE\DESIGN</span>
+                    </div>
+
+                </div>
+            </a>
+            <div class="info-wrap">
+                <div class="info" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-inner">
+                        <span data-do-animation="[]" class="svg-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56.5" height="56.812"
+                                viewBox="0 0 56.5 56.812" data-prefix="iv03c6uls">
+                                <path
+                                    d="M28.253 16.651a1.5 1.5 0 0 0 0-2.99 1.793 1.793 0 1 1 1.785-1.794 1.488 1.488 0 1 0 2.975 0 4.76 4.76 0 1 0-4.76 4.784zm20.489-6.482h-2.5a1.495 1.495 0 0 0 0 2.989h2.5a4.806 4.806 0 0 1 4.8 4.8v10.748H40.283a1.491 1.491 0 0 0-1.488 1.5v13.1H21.206a5.683 5.683 0 0 0-4.011-4.028V30.45a1.864 1.864 0 0 0-1.554-1.752H2.966V17.962a4.806 4.806 0 0 1 4.8-4.8h2.451a1.495 1.495 0 0 0 0-2.989H7.766a7.791 7.791 0 0 0-7.771 7.793v31.04A7.791 7.791 0 0 0 7.766 56.8h40.98a7.792 7.792 0 0 0 7.773-7.794V17.962a7.792 7.792 0 0 0-7.777-7.793zM2.966 31.69h11.259v7.616a5.686 5.686 0 0 0-3.926 4.006H2.966V31.69zm11.259 22.121H7.762a4.806 4.806 0 0 1-4.8-4.8v-2.708h7.349a5.683 5.683 0 0 0 3.91 3.943v3.57zm24.57 0h-21.6v-4.5a1.541 1.541 0 0 0 .043-.343 1.491 1.491 0 0 0-1.488-1.494 2.7 2.7 0 1 1 2.678-2.7 1.49 1.49 0 0 0 1.487 1.5 1.428 1.428 0 0 1 1.084.031H38.79v7.513zm14.745-4.8a4.806 4.806 0 0 1-4.8 4.8h-6.972v-7.513h11.77v2.708zm0-5.7H41.77V31.69h11.77v11.616zm-7.534-5.595a1.794 1.794 0 1 0-1.785-1.793 1.789 1.789 0 0 0 1.785 1.793zm-29-20.267l9 19.165a2.465 2.465 0 0 0 4.468 0l9-19.16a1.634 1.634 0 0 0 .071-.177 12.3 12.3 0 1 0-22.65-.1 1.92 1.92 0 0 0 .111.272zM28.25 2.995a9.4 9.4 0 0 1 8.53 13.192l-.027.069-8.508 18.11-8.512-18.115v-.014a1.456 1.456 0 0 0-.057-.156 9.4 9.4 0 0 1 8.577-13.086z"
+                                    fill-rule="evenodd" class="path-i1r9ndbc8"></path>
+                            </svg>
+                        </span>
+                        <div class="info-text">
+                            <div class="list">
+                                <div class="list-item">
+                                    <div class="list-title animate__animated animate__fadeInDown">
+                                        <span class="bold-text">ЧУЙ, БИШКЕК</span>
+                                    </div>
+                                    <div class="list-text" title="Наш адрес">
+                                        <span class="span">Проспект Манаса 40.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-2" data-aos="fade-up" data-aos-delay="100">
+
+                    <span data-do-animation="[]" class="svg-image">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none" />
+                            <path  d="M159.4,40A80.1,80.1,0,0,1,216,96.6" fill="none" stroke="#000"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="12" />
+                            <path  d="M151.1,70.9a47.9,47.9,0,0,1,34,34" fill="none" stroke="#000" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="12" />
+                            <path 
+                                d="M92.5,124.8a83.6,83.6,0,0,0,39,38.9,8,8,0,0,0,7.9-.6l25-16.7a7.9,7.9,0,0,1,7.6-.7l46.8,20.1a7.9,7.9,0,0,1,4.8,8.3A48,48,0,0,1,176,216,136,136,0,0,1,40,80,48,48,0,0,1,81.9,32.4a7.9,7.9,0,0,1,8.3,4.8l20.1,46.9a8,8,0,0,1-.6,7.5L93,117A8,8,0,0,0,92.5,124.8Z"
+                                fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="12" />
+                        </svg>
+                    </span>
+                    <div class="info-text" >
+                        <div class="list">
+                            <div class="list-item-2">
+                                <a href="tel:+996706611550" target="_self">
+                                    <div class="list-title">
+                                        <span class="bold-text">+996 (550) 611 550</span>
+                                    </div>
+
+                                </a>
+                                <div class="list-text pe-0 pt-2">
+                                    <span class="span">Пн-Сб с 8:00 до 18:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="section-navbar d-flex justify-content-between">
+        <div class="left">
+            <nav class="navbar-desktop d-flex">
+                <ul class="nav-ul menu-list d-flex bg-black">
+                    <li class="ul-item"><a href="{% url 'index' %}" class="ul-item-link {{home_active}}">ГЛАВНАЯ</a></li>
+                    <li class="ul-item"><a href="{% url 'about' %}" class="ul-item-link {{about_active}}">О КОМПАНИИ</a></li>
+                    <li class="ul-item"><a href="{% url 'portfolio' %}" class="ul-item-link {{portfolio_active}}">Портфолио</a></li>
+                    <!-- <li class="ul-item"><a href="#" class="ul-item-link">Наши награды</a></li> -->
+                    <li class="ul-item"><a href="{% url 'news' %}" class="ul-item-link {{news_active}}">новости</a></li>
+                    <li class="ul-item"><a href="{% url 'contact' %}" class="ul-item-link {{contact_active}}">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <ul class="nav-ul d-flex">
+                <li class="ul-item">
+                    <a href="#" class="callback">
+                        <span image="Array" class="callback-svg svg_image--u-i8rnahmt6" id="i8rnahmt6_2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16.969" height="15" viewBox="0 0 16.969 15"
+                                data-prefix="idhl558qn">
+                                <path data-name="4Telegram.svg"
+                                    d="M15.845.128L.624 6.147c-.832.251-.806 1.11-.19 1.316l3.814 1.244 1.459 4.672c.177.511.322.7.625.708a1 1 0 0 0 .771-.422c.387-.379.977-.977 1.909-1.923l3.966 3.061c.73.42 1.257.2 1.439-.708l2.487-12.849C17.171.13 16.543-.2 15.845.128zm-11 8.293l8.67-5.682c.428-.3.562.035.369.266l-7.2 6.76-.369 3.374z"
+                                    fill-rule="evenodd" class="path-ipeicbp7v"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="ul-item">
+                    <a href="https://wa.me/message/EC5ZXK5GNJ45F1" class="callback">
+                        <span image="Array" class="callback-svg svg_image--u-i8rnahmt6" id="i8rnahmt6_2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-whatsapp"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="ul-item">
+                    <a href="https://www.facebook.com/architectural_studio_ruslan-105769320934375" target="_blank" class="callback">
+                        <span image="Array" class="callback-svg svg_image--u-i8rnahmt6" id="i8rnahmt6_0">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 320 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="ul-item">
+                    <a href="https://www.instagram.com/architectural_studio_ruslan/" class="callback" target="_blank">
+                        <span image="Array" class="callback-svg svg_image--u-i8rnahmt6" id="i8rnahmt6_0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/> </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="ul-item">
+                    <a href="https://www.youtube.com/@architectural_studio_rusla1650" class="callback" target="_blank">
+                        <span image="Array" class="callback-svg svg_image--u-i8rnahmt6 ccc" id="i8rnahmt6_0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="youtube-svg"> <g> <path fill-rule="nonzero" d="M19.606 6.995c-.076-.298-.292-.523-.539-.592C18.63 6.28 16.5 6 12 6s-6.628.28-7.069.403c-.244.068-.46.293-.537.592C4.285 7.419 4 9.196 4 12s.285 4.58.394 5.006c.076.297.292.522.538.59C5.372 17.72 7.5 18 12 18s6.629-.28 7.069-.403c.244-.068.46-.293.537-.592C19.715 16.581 20 14.8 20 12s-.285-4.58-.394-5.005zm1.937-.497C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5v-7l6 3.5-6 3.5z"/> </g> </svg>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--// Navigation Bar -->
+</header>

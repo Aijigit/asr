@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Контакты - Студия ASR{% endblock title %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+<link rel="stylesheet" href="{% static 'main/css/bootstrap-icons.css'%}">
+<style>
+    .contact-wrapper {
+        position: relative;
+    }
+
+    .map {
+        position: relative;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+
+    .ymaps3x0--map {
+        width: 100%;
+    }
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+    .contact-us .info-item {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+        padding: 20px 0 30px 0;
+    }
+
+    .contact-us .info-item i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+        line-height: 0;
+        color: #ffd565;
+        border-radius: 50%;
+        border: 2px dotted #ffd565;
+    }
+
+    .contact-us .info-item h3 {
+        font-size: 20px;
+        color: #6c757d;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+
+    .contact-us .info-item p {
+        padding: 0;
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+</style>
+{% endblock custom_css %}
+
+{% block content %}
+<div class="section-innerpage">
+    <div class="container">
+        <div class="page-title d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+            <span class="text-title text-center text-uppercase">{{ page_title }}</span>
+        </div>
+
+        <div class="contact-wrapper pt-5">
+            <div class="contact-us">
+                <div class="container">
+                    <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-6">
+                            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-map"></i>
+                                <h3>НАШ АДРЕС</h3>
+                                <p>Кыргызстан, 72200, г. Бишкек, Проспект Манаса 40</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-envelope"></i>
+                                <h3>E-mail</h3>
+                                <p>ruslanzhusupbekov@gmail.com</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-telephone"></i>
+                                <h3>Свяжитесь с нами</h3>
+                                <p>+996 (550) 611 550</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="yandex-map pt-5 mb-5" data-aos="fade-up" data-aos-delay="200">
+                <div class="map">
+                    <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3a2625b592f14bfd95c6ee97b7072046513648244aaff3dda875c0b2447aeb1e&amp;width=480&amp;height=371&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Новости - Студия ASR{% endblock title %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+{% endblock custom_css %}
+
+{% block content %}
+
+<div class="section-innerpage">
+  <div class="container">
+    <div class="page-title d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+      <span class="text-title text-center text-uppercase">{{ page_title }}</span>
+    </div>
+
+    {% if news %}
+    <div class="inner-page-content">
+      <div class="columns">
+
+        {% for article in news %}
+        <div class="box" data-aos="fade-up" data-aos-delay="100">
+          <div class="date-wrapper">
+            <div class="date-and-category">
+              <span class="date">{{article.date_added}}</span> -
+              <span class="category">{{article.category}}</span>
+            </div>
+          </div>
+          <div class="box-img">
+            <div class="news-img-wrapper">
+              <img src="/{{article.thumb}}" alt="{{article.category}}" class="news-img zoom">
+            </div>
+          </div>
+
+          <div class="box-content">
+            <div class="content-heading">
+              <span class="h1-txt">{{article.title}}</span>
+            </div>
+            <div class="box-content-text">
+              <span class="news-description">{{article.short_description}}</span>
+            </div>
+
+            <div class="read-more">
+              <a href="{% url 'news_detail' article.slug %}" class="link-read-more">
+                <span class="read-more-text">
+                  Читать дальше
+                </span>
+                <span class="arrow-svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <div class="inner-page-content">
+      <div class="container d-flex flex-column justify-content-center pt-5">
+        <h1 class="empty-text text-center" data-aos="fade-up" data-aos-delay="400">Нет Новостей</h1>
+        <a href="{% url 'index' %}" class="text-center w-100">Перейти на главную страницу</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+
+{% endblock content %}

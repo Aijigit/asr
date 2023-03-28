@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}О нас{% endblock title %}
+
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'main/css/bootstrap-icons.css'%}">
+<link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+<link rel="stylesheet" href="{% static 'main/css/about.css'%}">
+<link rel="stylesheet" href="{% static 'main/css/slick-lightbox.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+{% endblock custom_css %}
+
+{% block content %}
+
+<section id="about" class="about_us">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row position-relative">
+
+      <div class="col-lg-7 about-img" style="background-image: url({% static 'main/img/3.jpg'%});"></div>
+
+      <div class="col-lg-7">
+        <h2>О Студии ASR</h2>
+        <div class="our-story">
+          <h4>от 2009 года</h4>
+          <h3>Наша история</h3>
+          <p>Наша студия специализируется на проектировании жилых и коммерческих зданий, дизайне интерьеров торговых,
+            общественных и офисных пространств.
+
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Архитектура</span>
+            </li>
+            <li><i class="bi bi-check-circle"></i> <span>Дизайн</span>
+            </li>
+            <li><i class="bi bi-check-circle"></i> <span>Строительства</span></li>
+          </ul>
+          <p> В своей работе, мы помогаем клиентам найти оптимальное архитектурное решение для развития бизнеса. Наша
+            основная задача – создавать проекты высокого уровня в Кыргызстане, максимально удовлетворяя индивидуальные
+            требования каждого заказчика. Уже 15 лет мы занимаем уверенную позицию на рынке строительства и архитектуры.
+            На нашем счету более 100 реализованных проектов в Кыргызстане и зарубежом.</p>
+
+          <div class="watch-video d-flex align-items-center position-relative">
+            <i class="bi bi-play-circle"></i>
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox stretched-link">Посмотреть видео</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="team" class="team">
+  <div class="container reviews-container" data-aos="fade-up">
+
+    <div class="reviews-header mb-5">
+      <div class="reviews-heading">
+        <div class="reviews-heading-txt">
+          <span class="wrap-div">Наша команда</span>
+        </div>
+      </div>
+      <div class="reviews-about">
+        <div class="reviews-about-text">
+          <span class="wrap-div desc-text">Объектами проектирования являются частные дома и квартиры, кафе и
+            рестораны,
+            градостроительная деятельность, торговые центры и даже заводы.</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row gy-5">
+
+      {% for team in teams %}
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-img">
+          <img src="/{{team.img}}" class="img-fluid" alt="{{team.full_name}}">
+          <div class="social">
+
+            <a href="{{team.facebook}}"><i class="bi bi-facebook"></i></a>
+            <a href="{{team.instagram}}"><i class="bi bi-instagram"></i></a>
+            <a href="{{team.telegram}}"><i class="bi bi-telegram"></i></a>
+          </div>
+        </div>
+        <div class="member-info text-center">
+          <h4>{{team.full_name}}</h4>
+          <span>{{team.position}}</span>
+          <!-- <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow</p> -->
+        </div>
+      </div>
+
+      {% empty %}
+      <div class="error pt-5 text-center">
+        <h2 class="text-danger">Нет Сотрудников в БД</h2>
+      </div>
+      {% endfor %}
+
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Reviews  -->
+<section class="reviews">
+  <div class="container reviews-container">
+    <div class="reviews-header" data-aos="fade-up" data-aos-delay="100">
+      <div class="reviews-heading">
+        <div class="reviews-heading-txt">
+          <span class="wrap-div">Наши награды</span>
+        </div>
+      </div>
+      <div class="reviews-about">
+        <div class="reviews-about-text">
+          <span class="wrap-div desc-text">Объектами проектирования являются частные дома и квартиры, кафе и
+            рестораны,
+            градостроительная деятельность, торговые центры и даже заводы.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rate-container">
+      <div class="rate-list">
+        {% if aw_count < 2 %} 
+      <div class="error pt-5 text-center">
+          <h2 class="text-danger">Добавьте минимум 3 награды.</h2>
+          <span>На данный момент в БД {{aw_count}} записей.</span>
+      </div>
+      {% else %}
+      <div class="rate-list-items">
+        <div class="rate-wrapper awards-wrapper">
+          {% for award in awards %}
+          <div class="rate-item-outer" data-aos="fade-up" data-aos-delay="100">
+            <div class="rate-item">
+              <div class="rate-img-wrap">
+                <div class="rate-img-fit">
+                  <img src="/{{award.picture}}" alt="{{award.title}}" title="{{award.title}}" class="img-avatar">
+                </div>
+              </div>
+              <div class="rate-content-wrap">
+                <div class="rate-text">
+                  <span class="wrap-div">{{award.description}}</span>
+                </div>
+                <div class="rate-title">
+                  <span class="wrap-div">{{award.title}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  </div>
+</section>
+{% endblock content %}

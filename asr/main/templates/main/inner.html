@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Внутренная страница{% endblock title %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'main/css/style.css'%}">
+{% endblock custom_css %}
+
+{% block content %}
+
+<div class="section-innerpage">
+    <div class="container">
+        <div class="page-title d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+            <span class="text-title text-center text-uppercase">{{ page_title }}</span>
+        </div>
+
+        <style>
+            .acontainer {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  /* Your container needs a fixed height, and it 
+   * needs to be taller than your tallest column. */
+  height: 960px;
+  
+  /* Optional */
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  padding: 20px;
+  width: 60%;
+  margin: 40px auto;
+  counter-reset: items;
+}
+
+.item {
+  width: 24%;
+  /* Optional */
+  position: relative;
+  margin-bottom: 2%;
+  border-radius: 3px;
+  background-color: #a1cbfa;
+  border: 1px solid #4290e2;
+  box-shadow: 0 2px 2px rgba(0,90,250,0.05),
+    0 4px 4px rgba(0,90,250,0.05),
+    0 8px 8px rgba(0,90,250,0.05),
+    0 16px 16px rgba(0,90,250,0.05);
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+ /* Just to print out numbers */
+div.item::before {
+  counter-increment: items;
+  content: counter(items);
+}
+
+/* Re-order items into 3 rows */
+.item:nth-of-type(4n+1) { order: 1; }
+.item:nth-of-type(4n+2) { order: 2; }
+.item:nth-of-type(4n+3) { order: 3; }
+.item:nth-of-type(4n)   { order: 4; }
+
+/* Force new columns */
+.break {
+  flex-basis: 100%;
+  width: 0;
+  border: 1px solid #ddd;
+  margin: 0;
+  content: "";
+  padding: 0;
+}
+
+        </style>
+        <div class="inner-page-content">
+            <div class="acontainer">
+                <div class="item" style="height: 140px"></div>
+                <div class="item" style="height: 190px"></div>
+                <div class="item" style="height: 170px"></div>
+                <div class="item" style="height: 120px"></div>
+                <div class="item" style="height: 160px"></div>
+                <div class="item" style="height: 180px"></div>
+                <div class="item" style="height: 140px"></div>
+                <div class="item" style="height: 150px"></div>
+                <div class="item" style="height: 170px"></div>
+                <div class="item" style="height: 170px"></div>
+                <div class="item" style="height: 140px"></div>
+                <div class="item" style="height: 190px"></div>
+                <div class="item" style="height: 170px"></div>
+                <div class="item" style="height: 120px"></div>
+                <div class="item" style="height: 160px"></div>
+                <div class="item" style="height: 180px"></div>
+                <div class="item" style="height: 140px"></div>
+                <div class="item" style="height: 150px"></div>
+                <div class="item" style="height: 170px"></div>
+                <div class="item" style="height: 170px"></div>
+                
+                <span class="item break"></span>
+                <span class="item break"></span>
+                <span class="item break"></span>
+              </div>
+              
+              <h3><a href="https://tobiasahlin.com/blog/masonry-with-css/">Read the blog post</a></h3>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
