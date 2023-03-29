@@ -105,58 +105,5 @@
   </div>
 </section>
 
-<!-- Reviews  -->
-<section class="reviews">
-  <div class="container reviews-container">
-    <div class="reviews-header" data-aos="fade-up" data-aos-delay="100">
-      <div class="reviews-heading">
-        <div class="reviews-heading-txt">
-          <span class="wrap-div">Наши награды</span>
-        </div>
-      </div>
-      <div class="reviews-about">
-        <div class="reviews-about-text">
-          <span class="wrap-div desc-text">Объектами проектирования являются частные дома и квартиры, кафе и
-            рестораны,
-            градостроительная деятельность, торговые центры и даже заводы.</span>
-        </div>
-      </div>
-    </div>
 
-    <div class="rate-container">
-      <div class="rate-list">
-        {% if aw_count < 2 %} 
-      <div class="error pt-5 text-center">
-          <h2 class="text-danger">Добавьте минимум 3 награды.</h2>
-          <span>На данный момент в БД {{aw_count}} записей.</span>
-      </div>
-      {% else %}
-      <div class="rate-list-items">
-        <div class="rate-wrapper awards-wrapper">
-          {% for award in awards %}
-          <div class="rate-item-outer" data-aos="fade-up" data-aos-delay="100">
-            <div class="rate-item">
-              <div class="rate-img-wrap">
-                <div class="rate-img-fit">
-                  <img src="/{{award.picture}}" alt="{{award.title}}" title="{{award.title}}" class="img-avatar">
-                </div>
-              </div>
-              <div class="rate-content-wrap">
-                <div class="rate-text">
-                  <span class="wrap-div">{{award.description}}</span>
-                </div>
-                <div class="rate-title">
-                  <span class="wrap-div">{{award.title}}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-    </div>
-  </div>
-  </div>
-</section>
 {% endblock content %}

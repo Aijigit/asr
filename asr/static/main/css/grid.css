@@ -11,6 +11,7 @@ body{
 }
 
 .main-wrap {
+    padding-top: 65px;
     position: relative;
     min-height: 100vh;
     display: -webkit-box;
@@ -200,7 +201,7 @@ h1 {
 
 
 /* Portfolio details */
-.navbar{
+.navbar.fixed-top{
   width: 70%;
   padding-left: 80px;
 }
@@ -225,21 +226,27 @@ h1 {
   position: absolute;
   top: 0;
   left: 100%;
-  width: 30%;
+  width: 45%;
   padding: 5px;
   background: rgba(0,0,0,0.6);
+  max-height: 65px;
 }
 .social-links-wrapper .ul-item {
 
 }
+.callback-num{
+  font-size: 18px;
+  font-family: Oswald;
+}
 .portfolio-link{
-  
+    text-decoration: none;
+    color: rgba(255,255,255,1)
+    ;
 }
 .portfolio-link{
   display: inline-block;
 }
 .portfolio-link span{
-  padding: 10px;
 }
 .portfolio-link span svg path{
   fill: rgba(255,255,255,1);
@@ -249,7 +256,7 @@ h1 {
   height: 20px;
 }
 .youtube-svg g path{
-  height: 40px;
+  height: 50px;
 }
 .content{
     position: relative;
@@ -257,7 +264,7 @@ h1 {
     height: 100%;
 }
 .wrapper-inner{
-    padding: 100px 80px;
+    padding: 40px 80px 80px 80px;
     width: 70%;
     background: #fff;
 }

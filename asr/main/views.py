@@ -39,6 +39,7 @@ def index(request):
 
 def about_us(request):
     page_title = "О компании"
+    aw_count = Awards.objects.all().count()
     
     team = Team.objects.all()
     awards = Awards.objects.all().order_by('-id')
@@ -94,12 +95,13 @@ def news(request):
     page_title = "Новости"
     
     news = News.objects.all().order_by('-date_added')
-    
+    awards = Awards.objects.all().order_by('-id')
     
     context = {
         "page_title" : page_title,
         "news" : news,
-        "news_active" : is_active
+        "news_active" : is_active,
+        "awards" : awards
     }
 
     return render(request, 'main/news.html', context)
